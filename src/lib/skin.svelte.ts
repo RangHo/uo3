@@ -15,23 +15,22 @@ type Skin = {
 };
 
 const styles = import.meta.glob<string>('./**/style.css', {
+  eager: true,
   query: '?raw',
   import: 'default',
 });
 
-const previews = import.meta.glob<PreviewComponent>('./**/preview.svelte');
+const previews = import.meta.glob<PreviewComponent>('./**/preview.svelte', {eager: true});
 
-async function loadSkins(path: 'siteskins' | 'workskins') {
+function loadSkins(path: 'siteskins' | 'workskins') {
   const result = [] as Skin[];
   for (let key in styles) {
     if (key.split('/')[1] !== path) {
       continue;
     }
     const id = key.split('/')[2];
-    const stylesheet = await styles[key]();
-    const preview = previews[`./${path}/${id}/preview.svelte`]
-      ? await previews[`./${path}/${id}/preview.svelte`]()
-      : undefined;
+    const stylesheet = styles[key];
+    const preview = previews[`./${path}/${id}/preview.svelte`];
     result.push({
       type: path,
       id,
@@ -42,9 +41,9 @@ async function loadSkins(path: 'siteskins' | 'workskins') {
   return result;
 }
 
-export const siteskins = await loadSkins('siteskins');
+export const siteskins = loadSkins('siteskins');
 
-export const workskins = await loadSkins('workskins');
+export const workskins = loadSkins('workskins');
 
 export const skins = { siteskins, workskins };
 
