@@ -1,2 +1,8 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+  import Chapters from '$lib/components/chapters.svelte';
+  import README from '../../README.md';
+</script>
+
+<Chapters title="" author="">
+  <README />
+</Chapters>

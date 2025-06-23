@@ -1,0 +1,58 @@
+#workskin blockquote.momotalk {
+  position: relative;
+  width: fit-content;
+  max-width: 75%;
+  margin: 1.5em auto;
+  margin-inline: 0;
+  padding: 0;
+  border-inline: none;
+}
+
+#workskin blockquote.momotalk > p {
+  display: block;
+  margin: 0.25em auto;
+  padding: 0.75em;
+  border-radius: 0.5em;
+}
+
+#workskin blockquote.momotalk.student {
+  margin-left: 1em;
+  margin-right: auto;
+}
+
+#workskin blockquote.momotalk.student > p {
+  color: #ffffff;
+  background: #4c5b70;
+}
+
+#workskin blockquote.momotalk.student > p:first-of-type::before {
+  content: '';
+  position: absolute;
+  top: 0.5em;
+  left: -0.8em;
+  width: 0;
+  height: 0;
+  border: solid 0.5em transparent;
+  border-right-color: #4c5b70;
+}
+
+#workskin blockquote.momotalk.sensei {
+  margin-left: auto;
+  margin-right: 1em;
+}
+
+#workskin blockquote.momotalk.sensei > p {
+  color: #ffffff;
+  background: #4a8aca;
+}
+
+#workskin blockquote.momotalk.sensei > p:first-of-type::after {
+  content: '';
+  position: absolute;
+  top: 0.5em;
+  right: -0.8em;
+  width: 0;
+  height: 0;
+  border: solid 0.5em transparent;
+  border-left-color: #4a8aca;
+}
