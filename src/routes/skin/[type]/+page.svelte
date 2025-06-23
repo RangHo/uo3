@@ -6,13 +6,13 @@
   import { skins } from '$lib/skin.svelte';
 
   let { data }: PageProps = $props();
-  let { type } = data;
+  let skinType = $derived(data.type);
 </script>
 
 <Chapters title="Skins" author="">
-  <p>Here are the list of all {type} available:</p>
+  <p>Here are the list of all {skinType} available:</p>
   <ul>
-    {#each skins[type] as skin}
+    {#each skins[skinType] as skin}
       <li>
         <a href="{base}/skin/{skin.type}/{skin.id}">{skin.preview?.name || skin.id}</a>
       </li>
