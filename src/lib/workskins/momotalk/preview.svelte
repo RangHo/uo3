@@ -45,3 +45,17 @@
 <blockquote class="momotalk sensei">
   <p>청구서는 어떻게 써야 하지⋯⋯.</p>
 </blockquote>
+
+<blockquote class="momotalk student">
+  <p>청구서 양식이라면 밀레니엄 학원에서 쓰는 것이 있어요.</p>
+  <p>다음에 샬레를 방문할 때 가져다드릴게요.</p>
+</blockquote>
+
+<blockquote class="momotalk sensei">
+  <p>도와줘서 고마워.</p>
+</blockquote>
+
+<blockquote class="momotalk student">
+  <p>어려운 일도 아닌걸요.</p>
+  <p>그럼 좋은 하루 되세요.</p>
+</blockquote>
