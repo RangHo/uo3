@@ -8,5 +8,5 @@ export const load: PageLoad = async ({ params }) => {
     throw error(404, 'Invalid skin type. Valid types are "siteskins" or "workskins".');
   }
 
-  return { type: type as 'siteskins' | 'workskins'};
+  return { type: type as 'siteskins' | 'workskins' };
 };

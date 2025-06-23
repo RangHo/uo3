@@ -8,7 +8,7 @@
 </script>
 
 <script lang="ts">
-  import LoremIpsum from "$lib/components/lorem-ipsum.svelte";
+  import LoremIpsum from '$lib/components/lorem-ipsum.svelte';
 </script>
 
 <LoremIpsum />

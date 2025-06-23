@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths';
+
   import Chapters from '$lib/components/chapters.svelte';
   import { siteskins, workskins } from '$lib/skin.svelte';
 
@@ -12,7 +14,8 @@
   <ul>
     {#each skins as skin}
       <li>
-        <a href={`/skin/${skin.type}/${skin.id}`}>({skin.type}) {skin.preview?.name || skin.id}</a>
+        <a href="{base}/skin/{skin.type}/{skin.id}">({skin.type}) {skin.preview?.name || skin.id}</a
+        >
       </li>
     {/each}
   </ul>

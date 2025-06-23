@@ -12,7 +12,7 @@
 
   const skinStates = getSkins();
   const previousStates = $state.snapshot(skinStates);
-  
+
   onMount(() => {
     $inspect(skinStates[type === 'siteskins' ? 'site' : 'work']);
     skinStates[type === 'siteskins' ? 'site' : 'work'] = id;
@@ -21,7 +21,7 @@
   onDestroy(() => {
     const prop = type === 'siteskins' ? 'site' : 'work';
     skinStates[prop] = previousStates[prop];
-    });
+  });
 </script>
 
 <Chapters title={name} {author} summary={description}>
@@ -29,9 +29,9 @@
     <Preview />
   {:else}
     <LoremIpsum />
-    {/if}
-    <hr />
-    <Code lang="css">
+  {/if}
+  <hr />
+  <Code lang="css">
     {stylesheet}
-    </Code>
+  </Code>
 </Chapters>

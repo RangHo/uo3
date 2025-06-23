@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { PageProps } from './$types';
+  import { base } from '$app/paths';
 
   import Chapters from '$lib/components/chapters.svelte';
   import { skins } from '$lib/skin.svelte';
@@ -13,7 +14,7 @@
   <ul>
     {#each skins[type] as skin}
       <li>
-        <a href={`/skin/${skin.type}/${skin.id}`}>{skin.preview?.name || skin.id}</a>
+        <a href="{base}/skin/{skin.type}/{skin.id}">{skin.preview?.name || skin.id}</a>
       </li>
     {/each}
   </ul>

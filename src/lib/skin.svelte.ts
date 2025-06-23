@@ -20,7 +20,7 @@ const styles = import.meta.glob<string>('./**/style.css', {
   import: 'default',
 });
 
-const previews = import.meta.glob<PreviewComponent>('./**/preview.svelte', {eager: true});
+const previews = import.meta.glob<PreviewComponent>('./**/preview.svelte', { eager: true });
 
 function loadSkins(path: 'siteskins' | 'workskins') {
   const result = [] as Skin[];
