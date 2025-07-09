@@ -45,16 +45,29 @@ The preview file must start with one module-level `<script>` tag, such as:
 </script>
 ```
 
-From there, you can write whatever HTML code you'd like.
-
 > [!TIP]
 > The `author` and `description` metadata property will be rendered as HTML strings.
 > That means, if you want to include a link to your own profile, you can do that by using [an anchor tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a).
 
+From there, you can write whatever HTML code you'd like.
+
 If you know Svelte, technically you can write any Svelte code here.
 Any non-HTML preview document will be reviewed before being merged.
-
 For more information about Svelte, visit [svelte.dev](https://svelte.dev/).
+
+Since supplying `preview.svelte` will override the default example, you need to use the following template to include metadata only:
+
+``` svelte
+<script module>
+  export const name = 'NAME OF THE SKIN';
+  export const author = 'NAME OF THE AUTHOR';
+  export const description = 'DESCRIPTION OF THE SKIN';
+</script>
+<script>
+  import LoremIpsum from '$lib/components/lorem-ipsum.svelte';
+</script>
+<LoremIpsum />
+```
 
 #### 2. Provide the files to the maintainer
 
