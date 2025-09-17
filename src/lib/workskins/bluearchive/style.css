@@ -1,3 +1,7 @@
+#workskin .center {
+  text-align: center;
+}
+
 #workskin blockquote.momotalk {
   position: relative;
   width: fit-content;

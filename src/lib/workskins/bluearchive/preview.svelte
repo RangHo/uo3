@@ -1,9 +1,12 @@
 <script module>
-  export const name = 'MomoTalk Chat Bubbles';
+  export const name = 'Blue Archive Work Skin';
 
   export const author = 'RangHo Lee';
 
-  export const description = 'This skin provides MomoTalk-like chat bubbles for blockquotes.';
+  export const description = `
+<p>A work skin for fics based on Blue Archive.</p>
+<p>Use the <code>blockquote</code> element with the <code>momotalk</code> class to typeset MomoTalk chat messages. See the example below.</p>
+  `;
 </script>
 
 <blockquote class="momotalk student">
